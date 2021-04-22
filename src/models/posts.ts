@@ -5,7 +5,7 @@ export interface IPost {
   createdAt: string; // 記事作成日時
 }
 
-export const mockPosts: IPost = [
+export const mockPosts: Array<IPost> = [
   {
     id: 1,
     title: "タイトル",
