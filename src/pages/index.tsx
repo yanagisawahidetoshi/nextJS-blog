@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Link from "next/link";
 import styles from "../styles/index.module.css";
 import { IPost, mockPosts } from "../models/posts";
 
@@ -9,11 +10,15 @@ const Index: NextPage = () => {
       <div>
         {mockPosts.map((post: IPost) => {
           return (
-            <section key={post.id}>
-              <h2>{post.title}</h2>
-              <p>{post.content}</p>
-              <p>{post.createdAt}</p>
-            </section>
+            <Link href={`posts/${post.id}`}>
+              <a>
+                <section key={post.id}>
+                  <h2>{post.title}</h2>
+                  <p>{post.content}</p>
+                  <p>{post.createdAt}</p>
+                </section>
+              </a>
+            </Link>
           );
         })}
       </div>
