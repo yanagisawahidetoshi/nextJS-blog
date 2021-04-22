@@ -9,7 +9,7 @@ const Index: NextPage = () => {
       <div>
         {mockPosts.map((post: IPost) => {
           return (
-            <section>
+            <section key={post.id}>
               <h2>{post.title}</h2>
               <p>{post.content}</p>
               <p>{post.createdAt}</p>
