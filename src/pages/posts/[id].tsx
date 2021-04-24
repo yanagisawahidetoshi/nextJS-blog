@@ -1,10 +1,6 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import { IPost, mockPosts } from "../../models/posts";
 
-type Props = {
-  post: IPost;
-};
-
 const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
   return (
     <section>
@@ -21,10 +17,21 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const props: Props = mockPosts.find(
-    (post) => post.id === parseInt(params.id)
+  if (!params?.id) {
+    return { notFound: true };
+  }
+
+  const id = params.id.toString();
+
+  const post: IPost | undefined = mockPosts.find(
+    (post) => post.id.toString() === id
   );
-  return { props: props };
+
+  if (post === undefined) {
+    return { notFound: true };
+  }
+
+  return { props: post };
 };
 
 export default Post;
