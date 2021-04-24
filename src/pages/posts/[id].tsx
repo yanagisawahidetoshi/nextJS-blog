@@ -21,10 +21,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  const id = params.id.toString();
-
   const post: IPost | undefined = mockPosts.find(
-    (post) => post.id.toString() === id
+    (post) => post.id.toString() === params.id
   );
 
   if (post === undefined) {
