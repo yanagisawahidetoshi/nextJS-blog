@@ -10,9 +10,9 @@ const Index: NextPage = () => {
       <div>
         {mockPosts.map((post: IPost) => {
           return (
-            <Link href={`posts/${post.id}`}>
+            <Link href={`/posts/${post.id}`} key={post.id}>
               <a>
-                <section key={post.id}>
+                <section>
                   <h2>{post.title}</h2>
                   <p>{post.content}</p>
                   <p>{post.createdAt}</p>
