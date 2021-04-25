@@ -20,7 +20,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     .catch((err) => console.log(err));
   const data = await res.json();
 
-  const paths = data.map((post: IPost) => `/posts/${post.id}`);
+  const paths = data.contents.map((post: IPost) => `/posts/${post.id}`);
   return { paths, fallback: false };
 };
 
