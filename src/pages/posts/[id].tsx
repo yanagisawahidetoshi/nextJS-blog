@@ -5,7 +5,11 @@ const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
   return (
     <section>
       <h1>{title}</h1>
-      <p>{content}</p>
+      <div
+        dangerouslySetInnerHTML={{
+          __html: content,
+        }}
+      />
       <p>{createdAt}</p>
     </section>
   );
