@@ -3,12 +3,12 @@ import Link from "next/link";
 import styles from "../styles/index.module.css";
 import { IPost, mockPosts } from "../models/posts";
 
-const Index: NextPage = () => {
+const Index: NextPage = ({ posts }) => {
   return (
     <>
       <h1 className={styles.title}>BLOG</h1>
       <div>
-        {mockPosts.map((post: IPost) => {
+        {posts.map((post: IPost) => {
           return (
             <Link href={`/posts/${post.id}`} key={post.id}>
               <a>
@@ -24,6 +24,22 @@ const Index: NextPage = () => {
       </div>
     </>
   );
+};
+
+export const getStaticProps = async () => {
+  const key = {
+    headers: { "X-API-KEY": process.env.API_KEY },
+  };
+  const res = await fetch(`${process.env.API_BASE_URL}blog`, key)
+    .then((res) => res)
+    .catch((err) => console.log(err));
+  const data = await res.json();
+
+  return {
+    props: {
+      posts: data.contents,
+    },
+  };
 };
 
 export default Index;
