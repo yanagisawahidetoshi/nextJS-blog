@@ -14,7 +14,9 @@ const Index: NextPage = ({ posts }) => {
               <a>
                 <section>
                   <h2>{post.title}</h2>
-                  <p>{post.content}</p>
+                  <p className={styles.content}>
+                    {post.content.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, "")}
+                  </p>
                   <p>{post.createdAt}</p>
                 </section>
               </a>
