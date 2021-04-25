@@ -12,7 +12,15 @@ const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = mockPosts.map((post) => `/posts/${post.id}`);
+  const key = {
+    headers: { "X-API-KEY": process.env.API_KEY },
+  };
+  const res = await fetch(`${process.env.API_BASE_URL}blog`, key)
+    .then((res) => res)
+    .catch((err) => console.log(err));
+  const data = await res.json();
+
+  const paths = data.map((post: IPost) => `/posts/${post.id}`);
   return { paths, fallback: false };
 };
 
