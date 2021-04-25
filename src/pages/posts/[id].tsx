@@ -16,10 +16,10 @@ const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const key = {
+  const key: any = {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
-  const res = await fetch(`${process.env.API_BASE_URL}blog`, key)
+  const res: any = await fetch(`${process.env.API_BASE_URL}blog`, key)
     .then((res) => res)
     .catch((err) => console.log(err));
   const data = await res.json();
@@ -33,10 +33,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  const key = {
+  const key: any = {
     headers: { "X-API-KEY": process.env.API_KEY },
   };
-  const res = await fetch(`${process.env.API_BASE_URL}blog/${params.id}`, key)
+  const res: any = await fetch(
+    `${process.env.API_BASE_URL}blog/${params.id}`,
+    key
+  )
     .then((res) => res)
     .catch((err) => console.log(err));
   const post = await res.json();
