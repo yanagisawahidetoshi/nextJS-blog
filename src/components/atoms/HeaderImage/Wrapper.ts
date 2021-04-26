@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Wrapper = styled.div`
   border: 5px solid #3598db;
@@ -7,10 +7,13 @@ const Wrapper = styled.div`
   margin: 0 auto 15px auto;
   overflow: hidden;
   width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
-    padding: 5px;
     border-radius: 50%;
+    height: 150px;
   }
 `;
 
