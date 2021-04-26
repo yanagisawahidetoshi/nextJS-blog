@@ -1,10 +1,15 @@
-import React from 'react';
+import React from "react";
 
-import H2 from '../H2';
-import Wrapper from './Wrapper';
-import ShareButton from './ShareButton';
+import H2 from "../H2";
+import Wrapper from "./Wrapper";
+import ShareButton from "./ShareButton";
 
-function Share({ title, url }) {
+type Props = {
+  title: string;
+  url: string;
+};
+
+const Share: React.FC<Props> = ({ title, url }) => {
   const encodedURL = encodeURI(url);
   const text = encodeURI(title);
   return (
@@ -94,6 +99,6 @@ function Share({ title, url }) {
       </ShareButton>
     </Wrapper>
   );
-}
+};
 
 export default Share;
