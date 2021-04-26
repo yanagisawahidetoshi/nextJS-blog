@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react";
 
-import Wrapper from './Wrapper';
-import SocialLink from './SocialLink';
+import Wrapper from "./Wrapper";
+import SocialLink from "./SocialLink";
 
-function Social({ website, twitter, github, linkedin }) {
+type Props = {
+  website?: string;
+  twitter?: string;
+  github?: string;
+  linkedin?: string;
+};
+
+const Social: React.FC<Props> = ({ website, twitter, github, linkedin }) => {
   return (
     <Wrapper>
       {website && (
@@ -83,6 +90,6 @@ function Social({ website, twitter, github, linkedin }) {
       )}
     </Wrapper>
   );
-}
+};
 
 export default Social;
