@@ -1,4 +1,5 @@
 import type { AppProps } from "next/app";
+import "modern-css-reset/dist/reset.min.css";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 
 const GlobalStyle = createGlobalStyle``;
