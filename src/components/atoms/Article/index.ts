@@ -1,12 +1,11 @@
-import styled from 'styled-components';
-import userConfig from '../../../config';
+import styled from "styled-components";
 
 const Article = styled.article`
   color: #65738c;
   font-size: 16px;
 
   a {
-    color: ${userConfig.primaryColor};
+    color: ${(props) => props.theme.colors.primary};
     font-weight: 700;
     text-decoration: none;
 
