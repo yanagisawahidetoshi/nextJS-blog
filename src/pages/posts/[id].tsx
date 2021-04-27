@@ -2,17 +2,31 @@ import { NextPage, GetStaticPaths, GetStaticProps } from "next";
 import Layout from "../../components/Layout";
 import { IPost, mockPosts } from "../../models/posts";
 
+import Article from "../../components/atoms/Article";
+import ArticleHeader from "../../components/atoms/ArticleHeader";
+import Button from "../../components/atoms/Button";
+import Card from "../../components/atoms/Card";
+import Container from "../../components/atoms/Container";
+import FeaturedImage from "../../components/atoms/FeaturedImage";
+import PageNav from "../../components/atoms/PageNav";
+import Share from "../../components/atoms/Share";
+
 const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
   return (
     <Layout>
       <section>
-        <h1>{title}</h1>
-        <div
-          dangerouslySetInnerHTML={{
-            __html: content,
-          }}
-        />
-        <p>{createdAt}</p>
+        <Container>
+          <Card>
+            <ArticleHeader>
+              <h1>{title}</h1>
+              <p>{createdAt}</p>
+              <span />
+            </ArticleHeader>
+            <Article>
+              <div dangerouslySetInnerHTML={{ __html: content }} />
+            </Article>
+          </Card>
+        </Container>
       </section>
     </Layout>
   );
