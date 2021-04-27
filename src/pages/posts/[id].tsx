@@ -1,17 +1,20 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
+import Layout from "../components/Layout";
 import { IPost, mockPosts } from "../../models/posts";
 
 const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
   return (
-    <section>
-      <h1>{title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: content,
-        }}
-      />
-      <p>{createdAt}</p>
-    </section>
+    <Layout>
+      <section>
+        <h1>{title}</h1>
+        <div
+          dangerouslySetInnerHTML={{
+            __html: content,
+          }}
+        />
+        <p>{createdAt}</p>
+      </section>
+    </Layout>
   );
 };
 

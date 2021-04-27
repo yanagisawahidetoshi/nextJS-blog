@@ -1,11 +1,12 @@
 import { NextPage } from "next";
 import Link from "next/link";
+import Layout from "../components/Layout";
 import styles from "../styles/index.module.css";
 import { IPost, mockPosts } from "../models/posts";
 
 const Index: NextPage<any> = ({ posts }) => {
   return (
-    <>
+    <Layout>
       <h1 className={styles.title}>BLOG</h1>
       <div>
         {posts.map((post: IPost) => {
@@ -24,7 +25,7 @@ const Index: NextPage<any> = ({ posts }) => {
           );
         })}
       </div>
-    </>
+    </Layout>
   );
 };
 
