@@ -7,11 +7,8 @@ import "highlight.js/styles/night-owl.css";
 
 import Article from "../../components/atoms/Article";
 import ArticleHeader from "../../components/atoms/ArticleHeader";
-import Button from "../../components/atoms/Button";
 import Card from "../../components/atoms/Card";
 import Container from "../../components/atoms/Container";
-import FeaturedImage from "../../components/atoms/FeaturedImage";
-import PageNav from "../../components/atoms/PageNav";
 import Share from "../../components/atoms/Share";
 
 interface Props extends IPost {
