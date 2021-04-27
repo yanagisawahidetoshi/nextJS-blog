@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import FeaturedImage from "../FeaturedImage";
 import H1 from "../H1";
-import P from "../P";
+import Content from "./Content";
 import Wrapper from "./Wrapper";
 import Anchor from "./Anchor";
 import Date from "./Date";
@@ -41,7 +41,7 @@ const Summary: React.FC<Props> = ({ date, title, excerpt, slug, image }) => {
         </Link>
       </H1>
       <Date>{date}</Date>
-      <P>{excerpt}</P>
+      <Content>{excerpt}</Content>
       <Link href={slug}>
         <ContinueReading>Continue Reading &rarr;</ContinueReading>
       </Link>
