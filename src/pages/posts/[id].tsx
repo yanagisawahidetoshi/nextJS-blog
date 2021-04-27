@@ -1,17 +1,41 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
+import Layout from "../../components/Layout";
 import { IPost, mockPosts } from "../../models/posts";
+import cheerio from "cheerio";
+import hljs from "highlight.js";
+import "highlight.js/styles/night-owl.css";
 
-const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
+import Article from "../../components/atoms/Article";
+import ArticleHeader from "../../components/atoms/ArticleHeader";
+import Button from "../../components/atoms/Button";
+import Card from "../../components/atoms/Card";
+import Container from "../../components/atoms/Container";
+import FeaturedImage from "../../components/atoms/FeaturedImage";
+import PageNav from "../../components/atoms/PageNav";
+import Share from "../../components/atoms/Share";
+
+interface Props extends IPost {
+  highlightedBody: any;
+}
+
+const Post: NextPage<Props> = ({ title, createdAt, highlightedBody }) => {
   return (
-    <section>
-      <h1>{title}</h1>
-      <div
-        dangerouslySetInnerHTML={{
-          __html: content,
-        }}
-      />
-      <p>{createdAt}</p>
-    </section>
+    <Layout>
+      <section>
+        <Container>
+          <Card>
+            <ArticleHeader>
+              <h1>{title}</h1>
+              <p>{createdAt}</p>
+              <span />
+            </ArticleHeader>
+            <Article>
+              <div dangerouslySetInnerHTML={{ __html: highlightedBody }} />
+            </Article>
+          </Card>
+        </Container>
+      </section>
+    </Layout>
   );
 };
 
@@ -48,7 +72,14 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  return { props: post };
+  const $ = cheerio.load(post.content);
+  $("pre code").each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text());
+    $(elm).html(result.value);
+    $(elm).addClass("hljs");
+  });
+
+  return { props: { post, highlightedBody: $.html() } };
 };
 
 export default Post;
