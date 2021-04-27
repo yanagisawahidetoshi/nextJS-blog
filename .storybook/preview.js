@@ -1,4 +1,15 @@
 import * as nextImage from "next/image";
+import { ThemeProvider } from "styled-components";
+import { theme, GlobalStyles } from "../src/ThemeConfig";
+import { addDecorator } from "@storybook/react";
+
+addDecorator((storyFn) => (
+  <ThemeProvider theme={theme}>
+    <GlobalStyles />
+    {storyFn()}
+  </ThemeProvider>
+));
+
 
 Object.defineProperty(nextImage, "default", {
   configurable: true,
