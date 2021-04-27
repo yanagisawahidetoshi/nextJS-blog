@@ -6,9 +6,7 @@ export const theme = {
   },
 };
 
-export const GlobalStyles = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
-  
+export const GlobalStyles = createGlobalStyle`  
   *,
   *:before,
   *:after {
