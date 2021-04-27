@@ -33,6 +33,10 @@ export const GlobalStyles = createGlobalStyle`
     max-width: 100%;
   }
 
+  a {
+    cursor: pointer;
+  }
+
   pre[class*="language-"] {
     background: rgba(245, 245, 245, 1);
     color: rgb(65, 76, 94);  }
