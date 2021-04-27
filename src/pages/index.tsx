@@ -29,8 +29,8 @@ const Index: NextPage<any> = ({ posts }) => {
 };
 
 export const getStaticProps = async () => {
-  const key: any = {
-    headers: { "X-API-KEY": process.env.API_KEY },
+  const key = {
+    headers: { "X-API-KEY": process.env.API_KEY ?? "" },
   };
   const res: any = await fetch(`${process.env.API_BASE_URL}blog`, key)
     .then((res) => res)
