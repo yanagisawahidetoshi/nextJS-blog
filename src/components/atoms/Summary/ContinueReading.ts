@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import GatsbyLink from "gatsby-link";
 
-const ContinueReading = styled(GatsbyLink)`
+const ContinueReading = styled.a`
   color: #666d71;
   display: inline-block;
   font-size: 14px;
@@ -9,7 +8,7 @@ const ContinueReading = styled(GatsbyLink)`
   text-decoration: none;
 
   &:hover {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors?.primary};
   }
 `;
 
