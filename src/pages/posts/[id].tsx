@@ -1,5 +1,5 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { IPost, mockPosts } from "../../models/posts";
 
 const Post: NextPage<IPost> = ({ title, content, createdAt }) => {
