@@ -1,8 +1,6 @@
-import styled from 'styled-components';
-import GatsbyLink from 'gatsby-link';
-import userConfig from '../../../config';
+import styled from "styled-components";
 
-const ContinueReading = styled(GatsbyLink)`
+const ContinueReading = styled.a`
   color: #666d71;
   display: inline-block;
   font-size: 14px;
@@ -10,8 +8,8 @@ const ContinueReading = styled(GatsbyLink)`
   text-decoration: none;
 
   &:hover {
-    color: ${userConfig.primaryColor};
-  }  
+    color: ${(props) => props.theme.colors.primary};
+  }
 `;
 
 export default ContinueReading;
