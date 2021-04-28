@@ -14,7 +14,7 @@ export const getStaticProps = async () => {
   const key = {
     headers: { "X-API-KEY": process.env.API_KEY ?? "" },
   };
-  const res: any = await fetch(`${process.env.API_BASE_URL}blog`, key)
+  const res: any = await fetch(`${process.env.API_BASE_URL}blog?limit=25`, key)
     .then((res) => res)
     .catch((err) => console.log(err));
   const data = await res.json();
