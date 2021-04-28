@@ -60,7 +60,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     $(elm).addClass("hljs");
   });
 
-  return { props: { post, highlightedBody: $.html() } };
+  return { props: { ...post, highlightedBody: $.html() } };
 };
 
 export default Post;
