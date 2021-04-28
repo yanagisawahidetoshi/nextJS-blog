@@ -1,38 +1,22 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import Layout from "../../components/Layout";
-import { IPost, mockPosts } from "../../models/posts";
+import { IPost } from "../../models/posts";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
 
-import Article from "../../components/atoms/Article";
-import ArticleHeader from "../../components/atoms/ArticleHeader";
-import Card from "../../components/atoms/Card";
-import Container from "../../components/atoms/Container";
-import Share from "../../components/atoms/Share";
+import PagePost from "../../components/pages/Posts";
 
 interface Props extends IPost {
-  highlightedBody: any;
+  highlightedBody: string;
 }
 
 const Post: NextPage<Props> = ({ title, createdAt, highlightedBody }) => {
   return (
-    <Layout>
-      <section>
-        <Container>
-          <Card>
-            <ArticleHeader>
-              <h1>{title}</h1>
-              <p>{createdAt}</p>
-              <span />
-            </ArticleHeader>
-            <Article>
-              <div dangerouslySetInnerHTML={{ __html: highlightedBody }} />
-            </Article>
-          </Card>
-        </Container>
-      </section>
-    </Layout>
+    <PagePost
+      title={title}
+      createdAt={createdAt}
+      highlightedBody={highlightedBody}
+    />
   );
 };
 

@@ -1,35 +1,13 @@
 import { NextPage } from "next";
-import Link from "next/link";
-import Layout from "../components/Layout";
-import Card from "../components/atoms/Card";
-import Container from "../components/atoms/Container";
-import Pagination from "../components/atoms/Pagination";
-import Summary from "../components/atoms/Summary";
-import styles from "../styles/index.module.css";
-import { IPost, mockPosts } from "../models/posts";
+import PageIndex from "../components/pages/Index";
+import { IPost } from "../models/posts";
 
-const Index: NextPage<any> = ({ posts }) => {
-  return (
-    <Layout>
-      <Container>
-        {posts.map((post: IPost) => {
-          return (
-            <Card key={post.id}>
-              <Summary
-                date={post.createdAt}
-                title={post.title}
-                excerpt={post.content.replace(
-                  /<("[^"]*"|'[^']*'|[^'">])*>/g,
-                  ""
-                )}
-                slug={`./posts/${post.id}`}
-              />
-            </Card>
-          );
-        })}
-      </Container>
-    </Layout>
-  );
+type Props = {
+  posts: Array<IPost>;
+};
+
+const Index: NextPage<Props> = ({ posts }) => {
+  return <PageIndex posts={posts} />;
 };
 
 export const getStaticProps = async () => {
