@@ -5,11 +5,15 @@ import Pagination from "../../atoms/Pagination";
 import Summary from "../../atoms/Summary";
 import { IPost } from "../../../models/posts";
 
+import { useSummary } from "../../../hooks/useSummary";
+
 type Props = {
   posts: Array<IPost>;
 };
 
 const PageIndex: React.FC<Props> = ({ posts }) => {
+  const { removeHtml } = useSummary();
+
   return (
     <Layout>
       <Container>
@@ -19,10 +23,7 @@ const PageIndex: React.FC<Props> = ({ posts }) => {
               <Summary
                 date={post.createdAt}
                 title={post.title}
-                excerpt={post.content.replace(
-                  /<("[^"]*"|'[^']*'|[^'">])*>/g,
-                  ""
-                )}
+                excerpt={removeHtml(post.content)}
                 slug={`./posts/${post.id}`}
               />
             </Card>
