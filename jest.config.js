@@ -6,6 +6,7 @@ module.exports = {
     "[/\\\\]node_modules[/\\\\].+\\.(ts|tsx)$",
     "node_modules/(?!@shotgunjed)/",
   ],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   transform: {
     "^.+\\.[t|j]sx?$": "babel-jest",
     "^.+\\.[tj]sx?$": "./jest.transform.js",
@@ -17,7 +18,6 @@ module.exports = {
   ],
   moduleNameMapper: {
     "\\.(css|less|sass|scss)$": "identity-obj-proxy",
-    "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/__mocks__/fileMock.js",
   },
   testEnvironment: "jsdom",
 };
