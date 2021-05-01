@@ -24,7 +24,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const key: any = {
     headers: { "X-API-KEY": process.env.API_KEY ?? "" },
   };
-  const res: any = await fetch(`${process.env.API_BASE_URL}blog`, key)
+  const res: any = await fetch(
+    `${process.env.API_BASE_URL}blog?fields=id&limit=30`,
+    key
+  )
     .then((res) => res)
     .catch((err) => console.log(err));
   const data = await res.json();
