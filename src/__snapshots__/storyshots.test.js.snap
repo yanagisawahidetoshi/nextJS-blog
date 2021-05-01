@@ -44,7 +44,7 @@ exports[`Storyshots components/atoms/FeaturedImage Basic 1`] = `
 
 exports[`Storyshots components/atoms/FormatDate Basic 1`] = `"2021年01月01日"`;
 
-exports[`Storyshots components/atoms/FormatDate Empty Date 1`] = `"2021年04月29日"`;
+exports[`Storyshots components/atoms/FormatDate Empty Date 1`] = `"2019年06月24日"`;
 
 exports[`Storyshots components/atoms/FormatDate With Time Zone 1`] = `"2021年04月26日"`;
 
