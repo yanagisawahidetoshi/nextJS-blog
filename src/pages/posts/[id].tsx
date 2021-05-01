@@ -10,12 +10,22 @@ interface Props extends IPost {
   highlightedBody: string;
 }
 
-const Post: NextPage<Props> = ({ title, createdAt, highlightedBody }) => {
+const Post: NextPage<Props> = ({
+  id,
+  title,
+  createdAt,
+  description,
+  kv,
+  highlightedBody,
+}) => {
   return (
     <PagePost
+      id={id}
       title={title}
       createdAt={createdAt}
       highlightedBody={highlightedBody}
+      description={description}
+      kv={kv}
     />
   );
 };

@@ -3,6 +3,7 @@ import Card from "../../atoms/Card";
 import Container from "../../atoms/Container";
 import Pagination from "../../atoms/Pagination";
 import Summary from "../../atoms/Summary";
+import Head from "../../atoms/Head";
 import { IPost } from "../../../models/posts";
 
 type Props = {
@@ -12,6 +13,11 @@ type Props = {
 const PageIndex: React.FC<Props> = ({ posts }) => {
   return (
     <Layout>
+      <Head
+        description="Next.js/TypeScript/microCMSでJAMスタックなブログをReact未経験でもわかるように書いています。。"
+        title="JAMスタックでブログを作ろう"
+        url={""}
+      />
       <Container>
         {posts.map((post: IPost) => {
           return (
