@@ -6,6 +6,7 @@ import ArticleHeader from "../../../components/atoms/ArticleHeader";
 import Card from "../../../components/atoms/Card";
 import Container from "../../../components/atoms/Container";
 import Share from "../../../components/atoms/Share";
+import FormatDate from "../../atoms/FormatDate";
 
 interface Props {
   title: string;
@@ -21,7 +22,9 @@ const PagePost: React.FC<Props> = ({ title, createdAt, highlightedBody }) => {
           <Card>
             <ArticleHeader>
               <h1>{title}</h1>
-              <p>{createdAt}</p>
+              <p>
+                <FormatDate date={createdAt} />
+              </p>
               <span />
             </ArticleHeader>
             <Article>

@@ -8,6 +8,7 @@ import Wrapper from "./Wrapper";
 import Anchor from "./Anchor";
 import Date from "./Date";
 import ContinueReading from "./ContinueReading";
+import FormatDate from "../FormatDate";
 
 type Props = {
   date: string;
@@ -40,7 +41,9 @@ const Summary: React.FC<Props> = ({ date, title, excerpt, slug, image }) => {
           <Anchor>{title}</Anchor>
         </Link>
       </H1>
-      <Date>{date}</Date>
+      <Date>
+        <FormatDate date={date} />
+      </Date>
       <Content>{excerpt}</Content>
       <Link href={slug}>
         <ContinueReading>Continue Reading &rarr;</ContinueReading>
