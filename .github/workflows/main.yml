@@ -34,4 +34,3 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           test-command: "yarn jest --coverage"
-
