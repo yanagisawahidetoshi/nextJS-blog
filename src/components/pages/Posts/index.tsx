@@ -8,6 +8,7 @@ import Card from "../../../components/atoms/Card";
 import Container from "../../../components/atoms/Container";
 import Share from "../../../components/atoms/Share";
 import FormatDate from "../../atoms/FormatDate";
+import FeaturedImage from "../../atoms/FeaturedImage";
 
 interface Props {
   id: string;
@@ -15,7 +16,7 @@ interface Props {
   createdAt: string;
   highlightedBody: string;
   description: string;
-  kv: string;
+  kv: { url: string; width: number; height: number };
 }
 
 const PagePost: React.FC<Props> = ({
@@ -32,12 +33,19 @@ const PagePost: React.FC<Props> = ({
         description={description}
         title={title}
         url={`posts/${id}`}
-        image={kv}
+        image={kv?.url}
       />
       <section>
         <Container>
           <Card>
             <ArticleHeader>
+              {kv && (
+                <FeaturedImage
+                  src={kv.url}
+                  width={kv.width}
+                  height={kv.height}
+                />
+              )}
               <h1>{title}</h1>
               <p>
                 <FormatDate date={createdAt} />
