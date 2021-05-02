@@ -39,6 +39,10 @@ export default ({
         rel="apple-touch-icon"
         href={`${process.env.HOST}apple-touch-icon`}
       />
+      <meta
+        name="google-site-verification"
+        content="Ny09IPFr_Pv-3iA28AChDnhw2v_OE9HTEKq9AzJ65tE"
+      />
     </Head>
   );
 };
