@@ -79,10 +79,31 @@ exports[`Storyshots components/atoms/Header Basic 1`] = `
         onClick={[Function]}
         onMouseEnter={[Function]}
       >
-        <img
-          alt=""
-          src="/profile.png"
-        />
+        <div
+          style={
+            Object {
+              "paddingBottom": "111.11111111111111%",
+              "position": "relative",
+            }
+          }
+        >
+          <img
+            alt="HidetoshiYanagisawaのプロフィール画像"
+            height={150}
+            src="/profile.png"
+            style={
+              Object {
+                "maxHeight": "100%",
+                "maxWidth": "100%",
+                "minHeight": "100%",
+                "minWidth": "100%",
+                "objectFit": "cover",
+                "position": "absolute",
+              }
+            }
+            width={135}
+          />
+        </div>
       </a>
     </div>
     <h1
@@ -224,10 +245,31 @@ exports[`Storyshots components/atoms/HeaderImage Basic 1`] = `
     onClick={[Function]}
     onMouseEnter={[Function]}
   >
-    <img
-      alt=""
-      src="/profile.png"
-    />
+    <div
+      style={
+        Object {
+          "paddingBottom": "111.11111111111111%",
+          "position": "relative",
+        }
+      }
+    >
+      <img
+        alt="HidetoshiYanagisawaのプロフィール画像"
+        height={150}
+        src="/profile.png"
+        style={
+          Object {
+            "maxHeight": "100%",
+            "maxWidth": "100%",
+            "minHeight": "100%",
+            "minWidth": "100%",
+            "objectFit": "cover",
+            "position": "absolute",
+          }
+        }
+        width={135}
+      />
+    </div>
   </a>
 </div>
 `;
@@ -529,7 +571,7 @@ exports[`Storyshots components/atoms/Summary Basic 1`] = `
   <span
     className="sc-fotPbf cTAbuV"
   >
-    2021-01-01
+    2021年01月01日
   </span>
   <p
     className="sc-bqiQRQ hzugav"
@@ -562,10 +604,31 @@ exports[`Storyshots components/pages/PageIndex Basic 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
-          <img
-            alt=""
-            src="/profile.png"
-          />
+          <div
+            style={
+              Object {
+                "paddingBottom": "111.11111111111111%",
+                "position": "relative",
+              }
+            }
+          >
+            <img
+              alt="HidetoshiYanagisawaのプロフィール画像"
+              height={150}
+              src="/profile.png"
+              style={
+                Object {
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "position": "absolute",
+                }
+              }
+              width={135}
+            />
+          </div>
         </a>
       </div>
       <h1
@@ -719,7 +782,7 @@ exports[`Storyshots components/pages/PageIndex Basic 1`] = `
         <span
           className="sc-fotPbf cTAbuV"
         >
-          2021-01-01
+          2021年01月01日
         </span>
         <p
           className="sc-bqiQRQ hzugav"
@@ -755,7 +818,7 @@ exports[`Storyshots components/pages/PageIndex Basic 1`] = `
         <span
           className="sc-fotPbf cTAbuV"
         >
-          2021-02-02
+          2021年02月02日
         </span>
         <p
           className="sc-bqiQRQ hzugav"
@@ -791,7 +854,7 @@ exports[`Storyshots components/pages/PageIndex Basic 1`] = `
         <span
           className="sc-fotPbf cTAbuV"
         >
-          2021-03-03
+          2021年03月03日
         </span>
         <p
           className="sc-bqiQRQ hzugav"
@@ -827,10 +890,31 @@ exports[`Storyshots components/pages/PagePost Basic 1`] = `
           onClick={[Function]}
           onMouseEnter={[Function]}
         >
-          <img
-            alt=""
-            src="/profile.png"
-          />
+          <div
+            style={
+              Object {
+                "paddingBottom": "111.11111111111111%",
+                "position": "relative",
+              }
+            }
+          >
+            <img
+              alt="HidetoshiYanagisawaのプロフィール画像"
+              height={150}
+              src="/profile.png"
+              style={
+                Object {
+                  "maxHeight": "100%",
+                  "maxWidth": "100%",
+                  "minHeight": "100%",
+                  "minWidth": "100%",
+                  "objectFit": "cover",
+                  "position": "absolute",
+                }
+              }
+              width={135}
+            />
+          </div>
         </a>
       </div>
       <h1
@@ -975,7 +1059,7 @@ exports[`Storyshots components/pages/PagePost Basic 1`] = `
             タイトル
           </h1>
           <p>
-            2021-01-01
+            2021年01月01日
           </p>
           <span />
         </div>
