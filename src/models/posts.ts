@@ -4,7 +4,7 @@ export interface IPost {
   content: string; // 記事の内容
   createdAt: string; // 記事作成日時
   description: string;
-  kv: string;
+  kv: { url: string; height: number; width: number };
 }
 
 export const mockPosts: Array<IPost> = [
@@ -14,7 +14,7 @@ export const mockPosts: Array<IPost> = [
     content: "内容",
     createdAt: "2021-01-01",
     description: "ディスクぷション",
-    kv: "",
+    kv: { url: "http://placehold.jp/150x150.png", width: 150, height: 150 },
   },
   {
     id: "b2",
@@ -22,7 +22,7 @@ export const mockPosts: Array<IPost> = [
     content: "内容2",
     createdAt: "2021-02-02",
     description: "ディスクぷション",
-    kv: "",
+    kv: { url: "http://placehold.jp/150x150.png", width: 150, height: 150 },
   },
   {
     id: "c3",
@@ -30,6 +30,6 @@ export const mockPosts: Array<IPost> = [
     content: "内容3",
     createdAt: "2021-03-03",
     description: "ディスクぷション",
-    kv: "",
+    kv: { url: "http://placehold.jp/150x150.png", width: 150, height: 150 },
   },
 ];
