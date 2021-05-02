@@ -34,7 +34,7 @@ export default ({
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
       <link rel="canonical" href={absolutePath} />
-      <link rel={`${process.env.HOST}favicon.ico`} />
+      <link rel="icon" href={`${process.env.HOST}favicon.ico`} />
       <link
         rel="apple-touch-icon"
         href={`${process.env.HOST}apple-touch-icon`}
