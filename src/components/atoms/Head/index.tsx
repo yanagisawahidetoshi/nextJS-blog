@@ -25,16 +25,16 @@ export default ({
       <meta name="keywords" content={keyword} />
       <meta property="og:type" content="blog" />
       <meta property="og:url" content={absolutePath} />
-      <meta property="og:image" content={image} />
+      {image && <meta property="og:image" content={image} />}
       <meta property="og:site_name" content={title} />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@tcr_jp" />
       <meta name="twitter:url" content={absolutePath} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      {image && <meta name="twitter:image" content={image} />}
       <link rel="canonical" href={absolutePath} />
-      <link href={`${process.env.HOST}favicon.ico`} />
+      <link rel={`${process.env.HOST}favicon.ico`} />
       <link
         rel="apple-touch-icon"
         href={`${process.env.HOST}apple-touch-icon`}
