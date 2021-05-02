@@ -4,14 +4,14 @@ name: CI
 # タイミングを指定
 on:
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   build:
     name: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v1 
       - name: yarn install
         run: yarn install
       - name: eslint review
@@ -19,7 +19,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           reporter: github-pr-review
-          eslint_flags: "./**/*.{vue,ts,js}"
+          eslint_flags: './**/*.{vue,ts,js}'
       - name: Run eslint
         run: yarn lint
       - name: Run Jest
