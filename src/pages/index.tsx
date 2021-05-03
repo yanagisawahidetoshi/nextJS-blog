@@ -1,6 +1,6 @@
 import { NextPage } from "next";
-import PageIndex from "../components/pages/Index";
-import { IPost } from "../models/posts";
+import PageIndex from "components/pages/Index";
+import { IPost } from "models/posts";
 
 type Props = {
   posts: Array<IPost>;

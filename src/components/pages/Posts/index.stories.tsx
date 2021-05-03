@@ -1,5 +1,5 @@
 import PagePost from "./";
-import { mockPosts } from "../../../models/posts";
+import { mockPosts } from "models/posts";
 
 export default {
   title: "components/pages/PagePost",
