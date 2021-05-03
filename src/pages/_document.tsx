@@ -11,15 +11,14 @@ class MyDocument extends Document {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
-  render() {
-    const isDev = process.env.NODE_ENV === "development";
 
+  render() {
     return (
       <Html lang="ja">
         <Head />
         <body>
           <Main />
-          {isDev && <NextScript />}
+          <NextScript />
         </body>
       </Html>
     );
