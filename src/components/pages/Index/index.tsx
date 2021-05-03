@@ -6,11 +6,15 @@ import Summary from "components/atoms/Summary";
 import Head from "components/atoms/Head";
 import { IPost } from "models/posts";
 
+import { useSummary } from "../../../hooks/useSummary";
+
 type Props = {
   posts: Array<IPost>;
 };
 
 const PageIndex: React.FC<Props> = ({ posts }) => {
+  const { removeHtml } = useSummary();
+
   return (
     <Layout>
       <Head
@@ -25,10 +29,7 @@ const PageIndex: React.FC<Props> = ({ posts }) => {
               <Summary
                 date={post.createdAt}
                 title={post.title}
-                excerpt={post.content.replace(
-                  /<("[^"]*"|'[^']*'|[^'">])*>/g,
-                  ""
-                )}
+                excerpt={removeHtml(post.content)}
                 slug={`./posts/${post.id}`}
               />
             </Card>
