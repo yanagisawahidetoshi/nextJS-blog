@@ -16,7 +16,8 @@ export default ({
   image,
   url,
 }: Props): JSX.Element => {
-  const absolutePath = `${process.env.HOST}${url}`;
+  const baseUrl = "https://next-js-blog-yanagisawahidetoshi.vercel.app/";
+  const absolutePath = `${baseUrl}${url}`;
   return (
     <Head>
       <title>{title}</title>
@@ -34,11 +35,8 @@ export default ({
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
       <link rel="canonical" href={absolutePath} />
-      <link rel="icon" href={`${process.env.HOST}favicon.ico`} />
-      <link
-        rel="apple-touch-icon"
-        href={`${process.env.HOST}apple-touch-icon`}
-      />
+      <link rel="icon" href={`${baseUrl}favicon.ico`} />
+      <link rel="apple-touch-icon" href={`${baseUrl}apple-touch-icon`} />
       <meta
         name="google-site-verification"
         content="Ny09IPFr_Pv-3iA28AChDnhw2v_OE9HTEKq9AzJ65tE"
