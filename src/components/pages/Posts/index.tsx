@@ -55,6 +55,10 @@ const PagePost: React.FC<Props> = ({
             <Article>
               <div dangerouslySetInnerHTML={{ __html: highlightedBody }} />
             </Article>
+            <Share
+              url={`https://next-js-blog-yanagisawahidetoshi.vercel.app/posts/${id}`}
+              title={title}
+            />
           </Card>
         </Container>
       </section>
