@@ -1,10 +1,10 @@
-import Layout from "../../Layout";
-import Card from "../../atoms/Card";
-import Container from "../../atoms/Container";
-import Pagination from "../../atoms/Pagination";
-import Summary from "../../atoms/Summary";
-import Head from "../../atoms/Head";
-import { IPost } from "../../../models/posts";
+import Layout from "components/Layout";
+import Card from "components/atoms/Card";
+import Container from "components/atoms/Container";
+import Pagination from "components/atoms/Pagination";
+import Summary from "components/atoms/Summary";
+import Head from "components/atoms/Head";
+import { IPost } from "models/posts";
 
 type Props = {
   posts: Array<IPost>;

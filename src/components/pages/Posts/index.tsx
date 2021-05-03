@@ -1,14 +1,14 @@
-import Layout from "../../../components/Layout";
-import { IPost, mockPosts } from "../../../models/posts";
+import Layout from "components/Layout";
+import { IPost, mockPosts } from "models/posts";
 
-import Head from "../../atoms/Head";
-import Article from "../../../components/atoms/Article";
-import ArticleHeader from "../../../components/atoms/ArticleHeader";
-import Card from "../../../components/atoms/Card";
-import Container from "../../../components/atoms/Container";
-import Share from "../../../components/atoms/Share";
-import FormatDate from "../../atoms/FormatDate";
-import FeaturedImage from "../../atoms/FeaturedImage";
+import Head from "components/atoms/Head";
+import Article from "components/atoms/Article";
+import ArticleHeader from "components/atoms/ArticleHeader";
+import Card from "components/atoms/Card";
+import Container from "components/atoms/Container";
+import Share from "components/atoms/Share";
+import FormatDate from "components/atoms/FormatDate";
+import FeaturedImage from "components/atoms/FeaturedImage";
 
 interface Props {
   id: string;

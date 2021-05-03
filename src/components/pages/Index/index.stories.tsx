@@ -1,5 +1,5 @@
 import PageIndex from "./";
-import { mockPosts } from "../../../models/posts";
+import { mockPosts } from "models/posts";
 
 export default {
   title: "components/pages/PageIndex",
