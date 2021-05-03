@@ -1,10 +1,10 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from "next";
-import { IPost } from "../../models/posts";
+import { IPost } from "models/posts";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
 
-import PagePost from "../../components/pages/Posts";
+import PagePost from "components/pages/Posts";
 
 interface Props extends IPost {
   highlightedBody: string;
