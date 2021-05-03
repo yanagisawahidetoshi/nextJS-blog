@@ -16,7 +16,7 @@ type Props = {
   excerpt: string;
   slug: string;
   image?: {
-    src: string;
+    url: string;
     width: number;
     height: number;
   };
@@ -29,7 +29,7 @@ const Summary: React.FC<Props> = ({ date, title, excerpt, slug, image }) => {
         <Link href={slug}>
           <Anchor>
             <FeaturedImage
-              src={image.src}
+              src={image.url}
               width={image.width}
               height={image.height}
             />
