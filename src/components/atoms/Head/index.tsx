@@ -16,7 +16,7 @@ export default ({
   image,
   url,
 }: Props): JSX.Element => {
-  const baseUrl = "https://next-js-blog-yanagisawahidetoshi.vercel.app/";
+  const baseUrl = "https://next-js-blog-bice.vercel.app/";
   const absolutePath = `${baseUrl}${url}`;
   return (
     <Head>
