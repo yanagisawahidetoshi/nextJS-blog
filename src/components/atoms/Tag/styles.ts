@@ -6,5 +6,5 @@ export const Wrapper = styled.p`
   color: #3e465b;
   padding: 5px 10px;
   display: inline-block;
-  margin-right: 8px;
+  margin: 8px 8px 0 0;
 `;
