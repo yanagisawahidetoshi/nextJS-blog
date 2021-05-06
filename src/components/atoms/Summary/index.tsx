@@ -54,8 +54,8 @@ const Summary: React.FC<Props> = ({
       <Date>
         <FormatDate date={date} />
       </Date>
-      {tags.map((tag) => {
-        return <Tag name={tag.name} />;
+      {tags.map((tag, index) => {
+        return <Tag name={tag.name} key={index} />;
       })}
       <Content>{excerpt}</Content>
       <Link href={slug}>
