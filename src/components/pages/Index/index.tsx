@@ -31,6 +31,7 @@ const PageIndex: React.FC<Props> = ({ posts }) => {
                 title={post.title}
                 excerpt={removeHtml(post.content)}
                 slug={`./posts/${post.id}`}
+                tags={post.tags}
               />
             </Card>
           );

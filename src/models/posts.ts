@@ -1,3 +1,5 @@
+import { ITag, mockTags } from "./tags";
+
 export interface IPost {
   id: string; //記事ID
   title: string; // 記事タイトル
@@ -5,6 +7,7 @@ export interface IPost {
   createdAt: string; // 記事作成日時
   description: string;
   kv: { url: string; height: number; width: number };
+  tags: Array<ITag>;
 }
 
 export const mockPosts: Array<IPost> = [
@@ -15,6 +18,7 @@ export const mockPosts: Array<IPost> = [
     createdAt: "2021-01-01",
     description: "ディスクぷション",
     kv: { url: "http://placehold.jp/150x150.png", width: 150, height: 150 },
+    tags: mockTags,
   },
   {
     id: "b2",
@@ -23,6 +27,7 @@ export const mockPosts: Array<IPost> = [
     createdAt: "2021-02-02",
     description: "ディスクぷション",
     kv: { url: "http://placehold.jp/150x150.png", width: 150, height: 150 },
+    tags: mockTags,
   },
   {
     id: "c3",
@@ -31,5 +36,6 @@ export const mockPosts: Array<IPost> = [
     createdAt: "2021-03-03",
     description: "ディスクぷション",
     kv: { url: "http://placehold.jp/150x150.png", width: 150, height: 150 },
+    tags: mockTags,
   },
 ];

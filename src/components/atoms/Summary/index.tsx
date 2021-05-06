@@ -9,6 +9,8 @@ import Anchor from "./Anchor";
 import Date from "./Date";
 import ContinueReading from "./ContinueReading";
 import FormatDate from "../FormatDate";
+import Tag from "../Tag";
+import { ITag } from "models/tags";
 
 type Props = {
   date: string;
@@ -20,9 +22,17 @@ type Props = {
     width: number;
     height: number;
   };
+  tags: Array<ITag>;
 };
 
-const Summary: React.FC<Props> = ({ date, title, excerpt, slug, image }) => {
+const Summary: React.FC<Props> = ({
+  date,
+  title,
+  excerpt,
+  slug,
+  image,
+  tags,
+}) => {
   return (
     <Wrapper>
       {image && (
@@ -44,6 +54,9 @@ const Summary: React.FC<Props> = ({ date, title, excerpt, slug, image }) => {
       <Date>
         <FormatDate date={date} />
       </Date>
+      {tags.map((tag, index) => {
+        return <Tag name={tag.name} key={index} />;
+      })}
       <Content>{excerpt}</Content>
       <Link href={slug}>
         <ContinueReading>Continue Reading &rarr;</ContinueReading>

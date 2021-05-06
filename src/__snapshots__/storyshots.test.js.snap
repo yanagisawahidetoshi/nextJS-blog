@@ -2,7 +2,7 @@
 
 exports[`Storyshots components/atoms/Button Basic 1`] = `
 <a
-  className="sc-bdvvaa hvjTJg"
+  className="styles__Button-sc-7h0i0s-0 erZRvf"
   onClick={[Function]}
   onMouseEnter={[Function]}
 >
@@ -12,7 +12,7 @@ exports[`Storyshots components/atoms/Button Basic 1`] = `
 
 exports[`Storyshots components/atoms/FeaturedImage Basic 1`] = `
 <div
-  className="sc-gsDJrp fwMPMY"
+  className="Wrapper-egwn4h-0 cmlxil"
 >
   <div
     style={
@@ -50,7 +50,7 @@ exports[`Storyshots components/atoms/FormatDate With Time Zone 1`] = `"2021年04
 
 exports[`Storyshots components/atoms/H1 Basic 1`] = `
 <h1
-  className="sc-dkPtyc eFQjiB"
+  className="H1-sc-1ah3rcu-0 irEwxk"
 >
   タイトル
 </h1>
@@ -58,7 +58,7 @@ exports[`Storyshots components/atoms/H1 Basic 1`] = `
 
 exports[`Storyshots components/atoms/H2 Basic 1`] = `
 <h2
-  className="sc-hKwCoD heHrdu"
+  className="H2-la7wef-0 fqSGgT"
 >
   タイトル
 </h2>
@@ -66,13 +66,13 @@ exports[`Storyshots components/atoms/H2 Basic 1`] = `
 
 exports[`Storyshots components/atoms/Header Basic 1`] = `
 <section
-  className="sc-eCImvq kyVKoc"
+  className="Container-sc-1mibnv1-0 gCGtxa"
 >
   <header
-    className="sc-kDThTU btnCGw"
+    className="Wrapper-sc-13vemy5-0 jfxozj"
   >
     <div
-      className="sc-jRQAMF gRyFIy"
+      className="Wrapper-gf8tas-0 iUYhmy"
     >
       <a
         href="/"
@@ -107,10 +107,10 @@ exports[`Storyshots components/atoms/Header Basic 1`] = `
       </a>
     </div>
     <h1
-      className="sc-dkPtyc eFQjiB"
+      className="H1-sc-1ah3rcu-0 irEwxk"
     >
       <a
-        className="sc-jrQzUz ZDMxJ"
+        className="Anchor-sc-1rskw6q-0 dKACDx"
         onClick={[Function]}
         onMouseEnter={[Function]}
       >
@@ -118,15 +118,15 @@ exports[`Storyshots components/atoms/Header Basic 1`] = `
       </a>
     </h1>
     <p
-      className="sc-furvIG sc-pVTma desEiY jdyjvz"
+      className="P-de605g-0 P-qg2aex-0 BnGEl gwDJJk"
     >
       Full-stack Web Developer
     </p>
     <div
-      className="sc-gKckTs eNpRCx"
+      className="Wrapper-e84fs5-0 kTpkQH"
     >
       <a
-        className="sc-iCfLBT fjsuBo"
+        className="SocialLink-sc-1alq0m5-0 irnNyO"
         href="https://afternoon-peak-11400.herokuapp.com/"
         rel="noopener"
         target="_blank"
@@ -152,7 +152,7 @@ exports[`Storyshots components/atoms/Header Basic 1`] = `
         Website
       </a>
       <a
-        className="sc-iCfLBT fjsuBo"
+        className="SocialLink-sc-1alq0m5-0 irnNyO"
         href="https://twitter.com/ultrasevenstar1"
         rel="noopener"
         target="_blank"
@@ -175,7 +175,7 @@ exports[`Storyshots components/atoms/Header Basic 1`] = `
         Twitter
       </a>
       <a
-        className="sc-iCfLBT fjsuBo"
+        className="SocialLink-sc-1alq0m5-0 irnNyO"
         href="https://github.com/yanagisawahidetoshi"
         rel="noopener"
         target="_blank"
@@ -198,7 +198,7 @@ exports[`Storyshots components/atoms/Header Basic 1`] = `
         Github
       </a>
       <a
-        className="sc-iCfLBT fjsuBo"
+        className="SocialLink-sc-1alq0m5-0 irnNyO"
         href="https://www.linkedin.com/in/hidetoshi-yanagisawa-a6063b132/"
         rel="noopener"
         target="_blank"
@@ -238,7 +238,7 @@ exports[`Storyshots components/atoms/Header Basic 1`] = `
 
 exports[`Storyshots components/atoms/HeaderImage Basic 1`] = `
 <div
-  className="sc-jRQAMF gRyFIy"
+  className="Wrapper-gf8tas-0 iUYhmy"
 >
   <a
     href="/"
@@ -276,17 +276,17 @@ exports[`Storyshots components/atoms/HeaderImage Basic 1`] = `
 
 exports[`Storyshots components/atoms/Pagination Basic 1`] = `
 <div
-  className="sc-iqsfdx hZJoli"
+  className="Wrapper-sc-1ra5y13-0 dPEjUO"
 >
   <a
-    className="sc-bdvvaa hvjTJg"
+    className="styles__Button-sc-7h0i0s-0 erZRvf"
     onClick={[Function]}
     onMouseEnter={[Function]}
   >
     ← Newer Posts
   </a>
   <a
-    className="sc-bdvvaa hvjTJg"
+    className="styles__Button-sc-7h0i0s-0 erZRvf"
     onClick={[Function]}
     onMouseEnter={[Function]}
   >
@@ -297,10 +297,10 @@ exports[`Storyshots components/atoms/Pagination Basic 1`] = `
 
 exports[`Storyshots components/atoms/Pagination Is First 1`] = `
 <div
-  className="sc-iqsfdx hZJoli"
+  className="Wrapper-sc-1ra5y13-0 dPEjUO"
 >
   <a
-    className="sc-bdvvaa hvjTJg"
+    className="styles__Button-sc-7h0i0s-0 erZRvf"
     onClick={[Function]}
     onMouseEnter={[Function]}
   >
@@ -311,10 +311,10 @@ exports[`Storyshots components/atoms/Pagination Is First 1`] = `
 
 exports[`Storyshots components/atoms/Pagination Is Last 1`] = `
 <div
-  className="sc-iqsfdx hZJoli"
+  className="Wrapper-sc-1ra5y13-0 dPEjUO"
 >
   <a
-    className="sc-bdvvaa hvjTJg"
+    className="styles__Button-sc-7h0i0s-0 erZRvf"
     onClick={[Function]}
     onMouseEnter={[Function]}
   >
@@ -325,16 +325,16 @@ exports[`Storyshots components/atoms/Pagination Is Last 1`] = `
 
 exports[`Storyshots components/atoms/Share Basic 1`] = `
 <div
-  className="sc-crHlIS LHSwI"
+  className="Wrapper-sc-1kmjqz5-0 iwoohZ"
 >
   <h2
-    className="sc-hKwCoD heHrdu"
+    className="H2-la7wef-0 fqSGgT"
   >
-    Share This Post
+    記事をシェアする
   </h2>
   <a
     aria-label="Share on Facebook"
-    className="sc-egiSv jEAXSK"
+    className="ShareButton-volept-0 hlDMHo"
     href="https://www.facebook.com/sharer/sharer.php?u=https://google.com"
     rel="noopener"
     target="_blank"
@@ -357,7 +357,7 @@ exports[`Storyshots components/atoms/Share Basic 1`] = `
   </a>
   <a
     aria-label="Share on Twitter"
-    className="sc-egiSv jEAXSK"
+    className="ShareButton-volept-0 hlDMHo"
     href="https://twitter.com/intent/tweet?text=%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB&url=https://google.com"
     rel="noopener"
     target="_blank"
@@ -380,7 +380,7 @@ exports[`Storyshots components/atoms/Share Basic 1`] = `
   </a>
   <a
     aria-label="Share on LinkedIn"
-    className="sc-egiSv jEAXSK"
+    className="ShareButton-volept-0 hlDMHo"
     href="https://www.linkedin.com/shareArticle?mini=true&url=https://google.com&title=%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB"
     rel="noopener"
     target="_blank"
@@ -414,7 +414,7 @@ exports[`Storyshots components/atoms/Share Basic 1`] = `
   </a>
   <a
     aria-label="Share by Email"
-    className="sc-egiSv jEAXSK"
+    className="ShareButton-volept-0 hlDMHo"
     href="mailto:?subject=%E3%82%BF%E3%82%A4%E3%83%88%E3%83%AB&body=https://google.com"
     rel="noopener"
   >
@@ -442,10 +442,10 @@ exports[`Storyshots components/atoms/Share Basic 1`] = `
 
 exports[`Storyshots components/atoms/Social Basic 1`] = `
 <div
-  className="sc-gKckTs eNpRCx"
+  className="Wrapper-e84fs5-0 kTpkQH"
 >
   <a
-    className="sc-iCfLBT fjsuBo"
+    className="SocialLink-sc-1alq0m5-0 irnNyO"
     href="https://google.co.jp"
     rel="noopener"
     target="_blank"
@@ -471,7 +471,7 @@ exports[`Storyshots components/atoms/Social Basic 1`] = `
     Website
   </a>
   <a
-    className="sc-iCfLBT fjsuBo"
+    className="SocialLink-sc-1alq0m5-0 irnNyO"
     href="https://twitter.com/ultrasevenstar1"
     rel="noopener"
     target="_blank"
@@ -494,7 +494,7 @@ exports[`Storyshots components/atoms/Social Basic 1`] = `
     Twitter
   </a>
   <a
-    className="sc-iCfLBT fjsuBo"
+    className="SocialLink-sc-1alq0m5-0 irnNyO"
     href="https://github.com/yanagisawahidetoshi"
     rel="noopener"
     target="_blank"
@@ -517,7 +517,7 @@ exports[`Storyshots components/atoms/Social Basic 1`] = `
     Github
   </a>
   <a
-    className="sc-iCfLBT fjsuBo"
+    className="SocialLink-sc-1alq0m5-0 irnNyO"
     href="https://www.linkedin.com/in/hidetoshi-yanagisawa-a6063b132/"
     rel="noopener"
     target="_blank"
@@ -555,13 +555,13 @@ exports[`Storyshots components/atoms/Social Basic 1`] = `
 
 exports[`Storyshots components/atoms/Summary Basic 1`] = `
 <div
-  className="sc-ksdxAp cxqwuo"
+  className="Wrapper-sc-5rtmq7-0 gxBBWa"
 >
   <h1
-    className="sc-dkPtyc eFQjiB"
+    className="H1-sc-1ah3rcu-0 irEwxk"
   >
     <a
-      className="sc-hBURRC eenarW"
+      className="Anchor-sc-1e834gc-0 gXrOUM"
       onClick={[Function]}
       onMouseEnter={[Function]}
     >
@@ -569,21 +569,54 @@ exports[`Storyshots components/atoms/Summary Basic 1`] = `
     </a>
   </h1>
   <span
-    className="sc-fotPbf cTAbuV"
+    className="Date-sc-16bchsv-0 BQNtD"
   >
     2021年01月01日
   </span>
   <p
-    className="sc-bqiQRQ hzugav"
+    className="styles__Wrapper-eeu82q-0 kNMQFI"
+  >
+    Next.js
+  </p>
+  <p
+    className="styles__Wrapper-eeu82q-0 kNMQFI"
+  >
+    Storybook
+  </p>
+  <p
+    className="Content-apmixs-0 xyqxB"
   >
     hogehoge
   </p>
   <a
-    className="sc-fFehDp ghjnCc"
+    className="ContinueReading-sj0d4t-0 iNfAoq"
     onClick={[Function]}
     onMouseEnter={[Function]}
   >
     Continue Reading →
   </a>
 </div>
+`;
+
+exports[`Storyshots components/atoms/Tag Basic 1`] = `
+<p
+  className="styles__Wrapper-eeu82q-0 kNMQFI"
+>
+  Next.js
+</p>
+`;
+
+exports[`Storyshots components/atoms/Tag Line Up Twos 1`] = `
+Array [
+  <p
+    className="styles__Wrapper-eeu82q-0 kNMQFI"
+  >
+    Next.js
+  </p>,
+  <p
+    className="styles__Wrapper-eeu82q-0 kNMQFI"
+  >
+    Storybook
+  </p>,
+]
 `;
