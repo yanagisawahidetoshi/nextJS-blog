@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Article = styled.article`
   color: #65738c;
   font-size: 16px;
+  word-break: break-word;
 
   a {
     color: ${(props) => props.theme.colors.primary};
@@ -35,7 +36,8 @@ const Article = styled.article`
     font-size: 17px;
     font-weight: 700;
     line-height: 1.5;
-    margin: 25px 50px 15px;
+    margin: 25px 0 15px;
+    padding: 0 24px;
   }
 
   h4 {
@@ -55,7 +57,8 @@ const Article = styled.article`
 
   p {
     line-height: 1.7;
-    margin: 15px 50px;
+    margin: 15px 0;
+    padding: 0 16px;
   }
 
   blockquote {
