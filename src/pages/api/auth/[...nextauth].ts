@@ -12,7 +12,7 @@ const findUserByCredentials = async (credentials: TCredentials) => {
     headers: { "X-API-KEY": process.env.API_KEY ?? "" },
   };
   const res: any = await fetch(
-    `${process.env.API_BASE_URL}user?filters=email[equals]${credentials.email}[and]password[equals]${credentials.password})`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}user?filters=email[equals]${credentials.email}[and]password[equals]${credentials.password})`,
     key
   )
     .then((res) => res)
