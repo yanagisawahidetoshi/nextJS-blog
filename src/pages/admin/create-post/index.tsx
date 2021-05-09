@@ -4,10 +4,9 @@ import { useForm } from "./useForm";
 import * as S from "./styles";
 
 const Index: NextPage = () => {
-  const { setTitle, setContent, title, content } = useForm();
-
+  const { setTitle, setContent, title, content, handleSubmit } = useForm();
   return (
-    <S.Form>
+    <S.Form onSubmit={handleSubmit}>
       <S.InputWrapper>
         <S.Label htmlFor="title">タイトル</S.Label>
         <S.InputText
