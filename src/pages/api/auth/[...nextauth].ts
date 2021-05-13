@@ -12,15 +12,15 @@ const findUserByCredentials = async (credentials: TCredentials) => {
     headers: { "X-API-KEY": process.env.API_KEY ?? "" },
   };
   const res: any = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}user?filters=email[equals]${credentials.email}[and]password[equals]${credentials.password})`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}user?filters=email[equals]${credentials.email}[and]password[equals]${credentials.password}`,
     key
   )
     .then((res) => res)
     .catch((err) => console.log(err));
   const data = await res.json();
 
-  if (data.contents.length > 1) {
-    return { id: data.contents.id, name: data.contents.name };
+  if (data.contents.length > 0) {
+    return { id: data.contents[0].id, name: data.contents[0].name };
   } else {
     return null;
   }
@@ -48,6 +48,15 @@ const options = {
       },
     }),
   ],
+  // callbacks: {
+  //   session: async (session, token) => {
+  //     console.log(token);
+  //     return Promise.resolve({
+  //       ...session,
+  //       accessToken: token.account.accessToken,
+  //     });
+  //   },
+  // },
 };
 
 export default (req: NextApiRequest, res: NextApiResponse) =>
