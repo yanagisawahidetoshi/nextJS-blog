@@ -35,7 +35,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     headers: { "X-API-KEY": process.env.API_KEY ?? "" },
   };
   const res: any = await fetch(
-    `${process.env.API_BASE_URL}blog?fields=id&limit=30`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}blog?fields=id&limit=30`,
     key
   )
     .then((res) => res)
@@ -55,7 +55,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     headers: { "X-API-KEY": process.env.API_KEY ?? "" },
   };
   const res: any = await fetch(
-    `${process.env.API_BASE_URL}blog/${params.id}`,
+    `${process.env.NEXT_PUBLIC_API_BASE_URL}blog/${params.id}`,
     key
   )
     .then((res) => res)
