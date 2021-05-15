@@ -1,10 +1,18 @@
 import { NextPage } from "next";
-import { ChangeEvent } from "React";
+import { ChangeEvent } from "react";
+import { useRouter } from "next/router";
+import { useSession } from "next-auth/client";
 import { useForm } from "./useForm";
 import * as S from "./styles";
 
 const Index: NextPage = () => {
   const { setTitle, setContent, title, content, handleSubmit } = useForm();
+  const [session] = useSession();
+  const router = useRouter();
+
+  if (!session) {
+    router.push("/");
+  }
   return (
     <S.Form onSubmit={handleSubmit}>
       <S.InputWrapper>
