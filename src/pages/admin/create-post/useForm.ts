@@ -1,9 +1,10 @@
-import { env } from "process";
 import { useCallback, useState, FormEvent } from "react";
+import { useSession } from "next-auth/client";
 
 export const useForm = () => {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [session] = useSession();
 
   const handleSubmit = useCallback(
     async (event: FormEvent<HTMLFormElement>) => {
@@ -17,7 +18,7 @@ export const useForm = () => {
         body: JSON.stringify({
           title,
           content,
-          user: process.env.NEXT_PUBLIC_USER_ID,
+          user: session?.id,
         }),
       };
       await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}blog`, key)
