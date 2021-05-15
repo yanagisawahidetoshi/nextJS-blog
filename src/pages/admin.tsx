@@ -1,13 +1,16 @@
 import { signIn, useSession } from "next-auth/client";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 const Admin = () => {
   const [session, loading] = useSession();
+  const router = useRouter();
+
   useEffect(() => {
     if (loading) {
       return;
     }
-    !session ? signIn() : console.log(session.user?.name);
+    !session ? signIn() : router.push("admin/create-post");
   });
 
   return null;
