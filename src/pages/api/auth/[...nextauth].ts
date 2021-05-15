@@ -48,15 +48,14 @@ const options = {
       },
     }),
   ],
-  // callbacks: {
-  //   session: async (session, token) => {
-  //     console.log(token);
-  //     return Promise.resolve({
-  //       ...session,
-  //       accessToken: token.account.accessToken,
-  //     });
-  //   },
-  // },
+  callbacks: {
+    session: async (session: any, data: any) => {
+      return Promise.resolve({
+        ...session,
+        id: data.sub,
+      });
+    },
+  },
 };
 
 export default (req: NextApiRequest, res: NextApiResponse) =>
