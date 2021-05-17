@@ -10,6 +10,8 @@ import Share from "components/atoms/Share";
 import FormatDate from "components/atoms/FormatDate";
 import FeaturedImage from "components/atoms/FeaturedImage";
 
+import * as S from "./styles";
+
 interface Props {
   id: string;
   title: string;
@@ -46,7 +48,7 @@ const PagePost: React.FC<Props> = ({
                   height={kv.height}
                 />
               )}
-              <h1>{title}</h1>
+              <S.Title>{title}</S.Title>
               <p>
                 <FormatDate date={createdAt} />
               </p>
