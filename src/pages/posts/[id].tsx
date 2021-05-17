@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     return { notFound: true };
   }
 
-  const $ = cheerio.load(post.content);
+  const $ = cheerio.load(post.content.replace("unsafe:./", "/"));
   $("pre code").each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text());
     $(elm).html(result.value);
