@@ -1,6 +1,7 @@
 import { NextPage } from "next";
 import PageIndex from "components/pages/Index";
 import { IPost } from "models/posts";
+import blogRepository from "repositories/blogRepository";
 
 type Props = {
   posts: Array<IPost>;
@@ -11,22 +12,16 @@ const Index: NextPage<Props> = ({ posts }) => {
 };
 
 export const getStaticProps = async () => {
-  const key = {
-    headers: { "X-API-KEY": process.env.API_KEY ?? "" },
-  };
-  const res: any = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}blog?limit=30`,
-    key
-  )
-    .then((res) => res)
-    .catch((err) => console.log(err));
-  const data = await res.json();
-
-  return {
-    props: {
-      posts: data.contents,
-    },
-  };
+  try {
+    const data = await blogRepository.index();
+    return {
+      props: {
+        posts: data.contents,
+      },
+    };
+  } catch (error) {
+    return { notFound: true };
+  }
 };
 
 export default Index;
