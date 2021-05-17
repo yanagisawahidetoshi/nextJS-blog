@@ -1,6 +1,7 @@
 import NextAuth from "next-auth";
 import Providers from "next-auth/providers";
 import type { NextApiRequest, NextApiResponse } from "next";
+import userRepository from "repositories/userRepository";
 
 type TCredentials = {
   email: string;
@@ -8,20 +9,17 @@ type TCredentials = {
 };
 
 const findUserByCredentials = async (credentials: TCredentials) => {
-  const key = {
-    headers: { "X-API-KEY": process.env.API_KEY ?? "" },
-  };
-  const res: any = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}user?filters=email[equals]${credentials.email}[and]password[equals]${credentials.password}`,
-    key
-  )
-    .then((res) => res)
-    .catch((err) => console.log(err));
-  const data = await res.json();
+  try {
+    const data = await userRepository.index(
+      `filters=email[equals]${credentials.email}[and]password[equals]${credentials.password}`
+    );
 
-  if (data.contents.length > 0) {
-    return { id: data.contents[0].id, name: data.contents[0].name };
-  } else {
+    if (data.contents.length > 0) {
+      return { id: data.contents[0].id, name: data.contents[0].name };
+    } else {
+      return null;
+    }
+  } catch (error) {
     return null;
   }
 };

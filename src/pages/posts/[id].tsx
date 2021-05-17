@@ -3,6 +3,7 @@ import { IPost } from "models/posts";
 import cheerio from "cheerio";
 import hljs from "highlight.js";
 import "highlight.js/styles/night-owl.css";
+import blogRepository from "repositories/blogRepository";
 
 import PagePost from "components/pages/Posts";
 
@@ -31,17 +32,7 @@ const Post: NextPage<Props> = ({
 };
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const key: any = {
-    headers: { "X-API-KEY": process.env.API_KEY ?? "" },
-  };
-  const res: any = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}blog?fields=id&limit=30`,
-    key
-  )
-    .then((res) => res)
-    .catch((err) => console.log(err));
-  const data = await res.json();
-
+  const data = await blogRepository.index();
   const paths = data.contents.map((post: IPost) => `/posts/${post.id}`);
   return { paths, fallback: false };
 };
@@ -50,18 +41,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   if (!params?.id) {
     return { notFound: true };
   }
-
-  const key: any = {
-    headers: { "X-API-KEY": process.env.API_KEY ?? "" },
-  };
-  const res: any = await fetch(
-    `${process.env.NEXT_PUBLIC_API_BASE_URL}blog/${params.id}`,
-    key
-  )
-    .then((res) => res)
-    .catch((err) => console.log(err));
-  const post = await res.json();
-
+  const post = await blogRepository.show(params.id.toString());
   if (post === undefined) {
     return { notFound: true };
   }
